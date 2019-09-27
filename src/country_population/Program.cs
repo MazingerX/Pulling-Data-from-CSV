@@ -7,24 +7,18 @@ namespace country_population
     {
         static void Main(string[] args)
         {
-            string filepath = @"‎⁨/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/Pop by Largest Final.csv.";
-            CsvReader reader = new CsvReader(filepath);
+            string filePath = @"‎⁨/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/Pop by Largest Final.csv.";
+            CsvReader reader = new CsvReader(filePath);
+            Dictionary<string, Country> countries = reader.ReadAllCountries();
 
-            List<Country> countries = reader.ReadAllCountries();
-            Country lilliput = new Country("Lilliput", "LIL", "Somewhere", 2_000_000);
-            int lilliputIndex = countries.FindIndex(countries=>x.Population < 2_000_000);
-            
-            countries.Insert(lilliputIndex, lilliput);   // Insert items in a list
+            Console.WriteLine("Which country code do you want to look up?");
+            string userInput = Console.ReadLine();
 
-            countries.RemoveAt(lilliputIndex);    // Remove items from a list
-
-            foreach(Country country in countries)
-            {
-                Console.WriteLine($"{PopulationFormatter.FormatPopulation (country.Population).PadLeft(15)}: {country.Name}");
-            }
-
-            Console.WriteLine($"{countries.Count} countries");
-
+            bool gotCountry = countries.TryGetValue(userInput, out Country country);
+            if(!gotCountry)
+                Console.WriteLine($"Sorry, there is no country with code, {userInput}");
+            else
+                Console.WriteLine($"{country.Name} has population {PopulationFormatter.FormatPopulation(country.Population)}");
         }
     }
 }

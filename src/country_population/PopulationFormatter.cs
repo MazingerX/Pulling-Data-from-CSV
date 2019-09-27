@@ -12,7 +12,7 @@ namespace country_population
             int popRounded = RoundPopulation4(population);
 
             return $"{popRounded: ### ### ### ###}" .Trim();        
-        }
+        } 
 
         // Rounds the population to 4 significant figures
         private static int RoundPopulation4(int population)
