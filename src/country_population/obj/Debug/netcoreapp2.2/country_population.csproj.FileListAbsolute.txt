@@ -2,3 +2,10 @@
 /Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/obj/Debug/netcoreapp2.2/country_population.csproj.CoreCompileInputs.cache
 /Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/obj/Debug/netcoreapp2.2/country_population.AssemblyInfoInputs.cache
 /Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/obj/Debug/netcoreapp2.2/country_population.AssemblyInfo.cs
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/bin/Debug/netcoreapp2.2/country_population.deps.json
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/bin/Debug/netcoreapp2.2/country_population.runtimeconfig.json
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/bin/Debug/netcoreapp2.2/country_population.runtimeconfig.dev.json
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/bin/Debug/netcoreapp2.2/country_population.dll
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/bin/Debug/netcoreapp2.2/country_population.pdb
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/obj/Debug/netcoreapp2.2/country_population.dll
+/Users/luishinostroza/CSharpPractice/Collections/Country_Population/src/country_population/obj/Debug/netcoreapp2.2/country_population.pdb

@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 
 namespace country_population
@@ -13,9 +16,9 @@ namespace country_population
             this._csvFilePath = csvFilePath;
         }
 
-        public Dictionary<string, Country> ReadAllCountries()
+        public List<Country> ReadAllCountries()
         {   
-            var countries = new Dictionary<string, Country>();
+            var countries = new List<Country>();
             
             using(StreamReader sr = new StreamReader(_csvFilePath))
             {
@@ -26,11 +29,20 @@ namespace country_population
                     while((csvLine = sr.ReadLine()) != null)
                     {
                         Country country = ReadCountryFromCsvLine(csvLine);
-                        countries.Add(country.Code, country);
+                        countries.Add(country);
                     }
             }
             
             return countries;
+        }
+
+        public void RemoveCommaCountries(List<Country> countries)
+        {
+            for (int i = 0; i < countries.Count; i++)
+            {
+                if (countries[i].Name.Contains(','))
+                countries.RemoveAt(i);
+            }
         }
 
         public Country ReadCountryFromCsvLine(string csvLine)
